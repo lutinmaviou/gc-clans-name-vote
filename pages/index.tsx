@@ -14,10 +14,11 @@ export async function getServerSideProps(/* context */) {
     //
     // Then you can execute queries against your database like so:
     // db.find({}) or any of the MongoDB Node Driver commands
-   
+    const data = await db.collection<Document>('gc-clansname-vote').find().toArray();
+    const properties = JSON.parse(JSON.stringify(data));
 
     return {
-      props: { isConnected: true },
+      props: { isConnected: true, properties },
     };
   } catch (e) {
     console.error(e);
@@ -28,9 +29,9 @@ export async function getServerSideProps(/* context */) {
 }
 
 export default function Home({
-  isConnected,
+  properties,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
- 
+  console.log(properties);
   return (
     <div className="container">
       <Head>
