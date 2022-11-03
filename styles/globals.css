@@ -16,8 +16,6 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  background: url('../public/img/bg.jpg');
-  background-size: cover;
   color: rgb(245, 245, 245);
   width: 100vw;
   height: 100vh;
