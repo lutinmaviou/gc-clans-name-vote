@@ -6,7 +6,10 @@ import Bg from '../../public/img/bg.jpg';
 
 const HomePage: NextComponentType = () => {
   const [ip, setIP] = useState('');
-
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    console.log('clic');
+  };
   //creating function to load ip address from the API
   const getData = async () => {
     const res = await axios.get('https://geolocation-db.com/json/');
@@ -23,7 +26,7 @@ const HomePage: NextComponentType = () => {
       <div className="bg">
         <Image src={Bg} fill alt="Fond d'écran golfeur" />
       </div>
-      <div className="question">
+      <form className="question">
         <p>Dois-t'on changer le nom du clan ?</p>
         <div className="inputs">
           <div className="checkbox1">
@@ -34,8 +37,9 @@ const HomePage: NextComponentType = () => {
             <label htmlFor="">NON</label>
             <input type="checkbox" />
           </div>
+          <button onClick={handleSubmit}>Valider</button>
         </div>
-      </div>
+      </form>
     </section>
   );
 };

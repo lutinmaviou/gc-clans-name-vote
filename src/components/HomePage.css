@@ -18,7 +18,7 @@ h2 {
 }
 
 .inputs {
-  width: 20%;
+  width: 30%;
   margin: auto;
   display: flex;
   justify-content: space-around;
@@ -28,6 +28,7 @@ h2 {
 input {
   width: 1.5vw;
   height: 1.5vw;
+  margin-left: 0.5vw;
 }
 
 .bg {
@@ -36,4 +37,27 @@ input {
   width: 100%;
   height: 100vh;
   z-index: -1;
+}
+
+button {
+  width: 30%;
+  height: 2.5vw;
+  padding-top: 0.2vw;
+  background-color: rgb(31, 188, 0);
+  color: yellow;
+  text-shadow: 0.1vw 0.1vw 0.1vw black, -0.1vw -0.1vw 0.1vw black;
+  border-radius: 0.5vw;
+  font-size: 1vw;
+  font-weight: bold;
+}
+
+button:hover,
+input {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(41, 244, 0);
+  color: black;
+  text-shadow: 0.1vw 0.1vw 0.3vw white, -0.1vw -0.1vw 0.3vw white;
 }
