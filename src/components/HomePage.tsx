@@ -8,7 +8,6 @@ const HomePage: NextComponentType = () => {
   //creating function to load ip address from the API
   const getData = async () => {
     const res = await axios.get('https://geolocation-db.com/json/');
-    console.log(res.data);
     setIP(res.data.IPv4);
   };
 
@@ -18,8 +17,8 @@ const HomePage: NextComponentType = () => {
   return (
     <section className="App">
       <h1>Team France 974</h1>
-      <p>Oté zot tout !</p>
-      <p>{ip}</p>
+      <h2>Oté zot tout !</h2>
+      <p className="question">Dois-t'on changer le nom du clan ?</p>
     </section>
   );
 };

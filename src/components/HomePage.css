@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+h1 {
+  font-size: 8vw;
+  margin-top: 2vw;
+}
+
+h2 {
+  font-size: 5vw;
+  margin-top: -6vw;
+  color: rgb(35, 213, 0);
+}

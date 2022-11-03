@@ -11,11 +11,14 @@ body {
 }
 
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  background-color: rgb(24, 24, 24);
+  background: url('../public/img/bg.jpg');
+  background-size: cover;
   color: rgb(245, 245, 245);
+  width: 100vw;
+  height: 100vh;
 }
