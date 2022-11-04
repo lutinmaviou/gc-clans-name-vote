@@ -1,34 +1,6 @@
 .App {
   text-align: center;
-}
-
-h1 {
-  font-size: 8vw;
-  margin-top: 2vw;
-}
-
-h2 {
-  font-size: 5vw;
-  margin-top: -6vw;
-  color: rgb(41, 244, 0);
-}
-
-.question {
-  font-size: 2vw;
-}
-
-.inputs {
-  width: 30%;
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-input {
-  width: 1.5vw;
-  height: 1.5vw;
-  margin-left: 0.5vw;
+  text-shadow: 0.2vw 0.2vw 0.2vw black, -0.2vw -0.2vw 0.2vw black;
 }
 
 .bg {
@@ -39,13 +11,77 @@ input {
   z-index: -1;
 }
 
+h1 {
+  font-size: 8vw;
+  margin-top: 2vw;
+}
+
+h2 {
+  font-size: 5vw;
+  margin-top: -11.5vw;
+  color: rgb(43, 255, 0);
+  opacity: 0.7;
+}
+
+.question {
+  font-size: 2.5vw;
+  margin-top: -3vw;
+}
+
+.question p {
+  color: rgb(255, 221, 0);
+  font-weight: bold;
+}
+
+.inputs,
+.inputs2 {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.inputs {
+  width: 20%;
+}
+
+.inputs2 {
+  width: 50%;
+}
+
+#no {
+  width: 1.5vw;
+  height: 1.5vw;
+  margin-left: 0.5vw;
+}
+
+.clansName {
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+#clansName {
+  border-radius: 0.5vw;
+  margin-left: 1vw;
+  width: 20vw;
+  height: 3vw;
+  font-size: 2vw;
+  cursor: text;
+  padding: 0 0.5vw;
+}
+
+.checkbox {
+  color: red;
+  font-weight: bold;
+  font-size: 2.2vw;
+}
+
 button {
   width: 30%;
   height: 2.5vw;
   padding-top: 0.2vw;
   background-color: rgb(31, 188, 0);
   color: yellow;
-  text-shadow: 0.1vw 0.1vw 0.1vw black, -0.1vw -0.1vw 0.1vw black;
   border-radius: 0.5vw;
   font-size: 1vw;
   font-weight: bold;
@@ -60,4 +96,20 @@ button:hover {
   background-color: rgb(41, 244, 0);
   color: black;
   text-shadow: 0.1vw 0.1vw 0.3vw white, -0.1vw -0.1vw 0.3vw white;
+}
+
+hr {
+  width: 46%;
+  margin: 3vw auto;
+}
+
+.purpose {
+  font-size: 2vw;
+  font-weight: bold;
+  margin: -2vw 0;
+  color: rgb(147, 205, 255);
+}
+
+#submit {
+  width: 7vw;
 }
