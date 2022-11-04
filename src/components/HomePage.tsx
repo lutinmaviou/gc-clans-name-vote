@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { NextComponentType } from 'next';
 import Image from 'next/image';
@@ -8,7 +8,7 @@ const HomePage: NextComponentType = () => {
   const [ip, setIP] = useState('');
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    console.log('clic');
+    console.log(e.target);
   };
   //creating function to load ip address from the API
   const getData = async () => {
@@ -30,12 +30,12 @@ const HomePage: NextComponentType = () => {
         <p>Dois-t'on changer le nom du clan ?</p>
         <div className="inputs">
           <div className="checkbox1">
-            <label htmlFor="">OUI</label>
-            <input type="checkbox" />
+            <label htmlFor="yes">OUI</label>
+            <input type="checkbox" name="yes" id="yes" />
           </div>
           <div className="checkbox2">
-            <label htmlFor="">NON</label>
-            <input type="checkbox" />
+            <label htmlFor="no">NON</label>
+            <input type="checkbox" name="no" id="no" />
           </div>
           <button onClick={handleSubmit}>Valider</button>
         </div>
