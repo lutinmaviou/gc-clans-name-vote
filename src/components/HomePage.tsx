@@ -20,7 +20,7 @@ const HomePage: NextComponentType = () => {
     getData();
   }, []);
   return (
-    <section className="App">
+    <section className="App ms-500">
       <h1>Team France 974</h1>
       <h2>Oté zot tout !</h2>
       <div className="bg">
