@@ -29,35 +29,47 @@ const HomePage: NextComponentType = () => {
     getData();
   }, []);
   return (
-    <section className="App ms-500">
-      <h1>Team France 974</h1>
-      <h2>Oté zot tout !</h2>
+    <div className="App ms-500">
       <div className="bg">
         <Image src={Bg} fill alt="Fond d'écran golfeur" />
       </div>
-      <form className="question">
-        <p>Dois-t'on changer le nom du clan ?</p>
-        <div className="inputs">
-          <div className="checkbox">
-            <label htmlFor="no">NON</label>
-            <input type="checkbox" name="no" id="no" onChange={handleCheckbox} />
+      <main>
+        <section className="title">
+          <h1>Team France 974</h1>
+          <h2>Oté zot tout !</h2>
+        </section>
+        <section className="question">
+          <form>
+            <p>Dois-t'on changer le nom du clan ?</p>
+            <div className="checkbox-container flex-row around items-center">
+              <div className="checkbox">
+                <label htmlFor="no">NON</label>
+                <input type="checkbox" name="no" id="no" onChange={handleCheckbox} />
+              </div>
+              <button onClick={handleSubmit}>Valider</button>
+            </div>
+          </form>
+        </section>
+        <section className="suggestion-container">
+          <div className="separation">
+            <hr />
+            <p>Sinon fais ta proposition ! (16 caractères max)</p>
+            <hr />
           </div>
-          <button onClick={handleSubmit}>Valider</button>
-        </div>
-      </form>
-      <hr />
-      <p className="purpose">Sinon fais ta proposion ! (16 caractères max)</p>
-      <hr />
-      <form className="else">
-        <div className="inputs2">
-          <div className="clansName">
-            <label htmlFor="clansName">Nom du clan</label>
-            <input type="text" name="clansName" id="clansName" />
-          </div>
-          <button onClick={handleSubmit} id="submit">Valider</button>
-        </div>
-      </form>
-    </section>
+          <form>
+            <div className="suggestion-wrapper">
+              <div className="suggestion-field">
+                <label htmlFor="clan-name">Nom du clan</label>
+                <input type="text" name="clan-name" id="suggestion-input" />
+              </div>
+              <button onClick={handleSubmit} id="submit">
+                Ajouter
+              </button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
   );
 };
 

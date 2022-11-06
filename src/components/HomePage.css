@@ -1,6 +1,9 @@
+/************* MOBILE FIRST *************/
+
 .App {
   text-align: center;
   text-shadow: 0.2vw 0.2vw 0.2vw black, -0.2vw -0.2vw 0.2vw black;
+  /*  width: 100%; */
 }
 
 .bg {
@@ -11,105 +14,92 @@
   z-index: -1;
 }
 
-h1 {
-  font-size: 8vw;
-  margin-top: 2vw;
+.title {
+  margin-top: 15vw;
 }
 
-h2 {
-  font-size: 5vw;
-  margin-top: -11.5vw;
+.title h1 {
+  font-size: 9vw;
+  opacity: 0.9;
+}
+
+.title h2 {
+  font-size: 6vw;
+  margin-top: -13vw;
   color: rgb(43, 255, 0);
   opacity: 0.7;
 }
 
 .question {
-  font-size: 2.5vw;
-  margin-top: -3vw;
+  font-size: 5vw;
+  margin: 8vw auto;
+  width: 70%;
+  font-weight: bold;
 }
 
 .question p {
   color: rgb(255, 221, 0);
-  font-weight: bold;
 }
 
-.inputs,
-.inputs2 {
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.inputs {
-  width: 20%;
-}
-
-.inputs2 {
-  width: 50%;
-}
-
-#no {
-  width: 1.5vw;
-  height: 1.5vw;
-  margin-left: 0.5vw;
-}
-
-.clansName {
-  font-size: 2vw;
-  font-weight: bold;
-}
-
-#clansName {
-  border-radius: 0.5vw;
-  margin-left: 1vw;
-  width: 20vw;
-  height: 3vw;
-  font-size: 2vw;
-  cursor: text;
-  padding: 0 0.5vw;
-}
-
-.checkbox {
+.question .checkbox-container {
   color: red;
-  font-weight: bold;
-  font-size: 2.2vw;
+  font-size: 6vw;
+  width: 60%;
+  margin: auto;
 }
 
-button {
+.question .checkbox-container #no {
+  width: 4.7vw;
+  height: 4.7vw;
+  margin-left: 1vw;
+}
+
+.question button {
   width: 30%;
-  height: 2.5vw;
-  padding-top: 0.2vw;
-  background-color: rgb(31, 188, 0);
-  color: yellow;
-  border-radius: 0.5vw;
-  font-size: 1vw;
+  height: 5vw;
+  margin-top: -0.4vw;
+  font-size: 2.6vw;
+}
+
+.suggestion-container {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 3vw;
+  color: rgb(255, 237, 122);
+}
+
+.suggestion-container .separation,
+.suggestion-container .suggestion-wrapper {
+  margin-top: 10vw;
+}
+
+.suggestion-container .suggestion-wrapper {
+  width: 60%;
+  margin: auto;
+  padding: 4vw;
+}
+
+.suggestion-container label {
+  font-size: 5vw;
   font-weight: bold;
-}
-
-button:hover,
-input {
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: rgb(41, 244, 0);
-  color: black;
-  text-shadow: 0.1vw 0.1vw 0.3vw white, -0.1vw -0.1vw 0.3vw white;
-}
-
-hr {
-  width: 46%;
-  margin: 3vw auto;
-}
-
-.purpose {
-  font-size: 2vw;
-  font-weight: bold;
-  margin: -2vw 0;
   color: rgb(147, 205, 255);
 }
 
-#submit {
-  width: 7vw;
+.suggestion-container #suggestion-input {
+  border-radius: 0.8vw;
+  border: none;
+  margin-top: 2vw;
+  width: 30vw;
+  height: 5vw;
+  font-size: 3vw;
+  font-weight: bold;
+  cursor: text;
+  padding: 0 1vw;
+}
+
+.suggestion-container button {
+  width: 15vw;
+  height: 5vw;
+  margin-top: 5vw;
+  font-size: 3vw;
 }
