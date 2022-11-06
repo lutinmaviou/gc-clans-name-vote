@@ -21,7 +21,37 @@ body {
   height: 100vh;
 }
 
+.flex-row {
+  display: flex;
+}
 
+.felx-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.around {
+  justify-content: space-around;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+button {
+  font-weight: bold;
+  background-color: rgb(31, 188, 0);
+  text-shadow: 0.1vw 0.1vw 0.1vw black, -0.1vw -0.1vw 0.1vw black;
+  color: white;
+  border: 0.2vw solid rgb(35, 70, 4);
+  border-radius: 0.5vw;
+}
+
+/*********** FONTS ***********/
 
 /* Original-surfer */
 .surfer {

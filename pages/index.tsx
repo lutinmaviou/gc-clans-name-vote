@@ -2,6 +2,11 @@ import Head from 'next/head';
 import clientPromise from '../lib/mongodb';
 import { InferGetServerSidePropsType } from 'next';
 import HomePage from '../src/components/HomePage';
+import { useEffect } from 'react';
+
+type Props = {
+  ip: string;
+};
 
 export async function getServerSideProps(/* context */) {
   try {
@@ -16,6 +21,9 @@ export async function getServerSideProps(/* context */) {
     // db.find({}) or any of the MongoDB Node Driver commands
     const data = await db.collection<Document>('gc-clansname-vote').find().toArray();
     const properties = JSON.parse(JSON.stringify(data));
+    /* const insert = await db
+      .collection<Props>('gc-clansname-vote')
+      .insertOne({ ip: 'toto' }); */
 
     return {
       props: { isConnected: true, properties },
@@ -32,12 +40,13 @@ export default function Home({
   properties,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   console.log(properties);
+  //useEffect(() => {}, []);
   return (
-    <div className="container">
+    <>
       <Head>
         <title>Golf Clash Vote Nom de Clan</title>
       </Head>
       <HomePage />
-    </div>
+    </>
   );
 }
