@@ -43,7 +43,7 @@ const HomePage: NextComponentType = () => {
             <p>Est-ce qu'on change le nom du clan ?</p>
             <div className="checkbox-container">
               <div className="checkbox">
-                <label htmlFor="no">NON</label>
+                <label htmlFor="no">Non</label>
                 <input type="checkbox" name="no" id="no" onChange={handleCheckbox} />
               </div>
               <button onClick={handleSubmit}>Valider</button>

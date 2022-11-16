@@ -22,6 +22,15 @@ body {
   background-color: black;
 }
 
+button {
+  font-weight: bold;
+  background-color: rgb(31, 188, 0);
+  text-shadow: 0.1vw 0.1vw 0.1vw black, -0.1vw -0.1vw 0.1vw black;
+  color: white;
+  border: 0.2vw solid rgb(35, 70, 4);
+  border-radius: 0.7vw;
+}
+
 button:hover {
   cursor: pointer;
 }
@@ -45,15 +54,6 @@ button:hover {
 
 .items-center {
   align-items: center;
-}
-
-button {
-  font-weight: bold;
-  background-color: rgb(31, 188, 0);
-  text-shadow: 0.1vw 0.1vw 0.1vw black, -0.1vw -0.1vw 0.1vw black;
-  color: white;
-  border: 0.2vw solid rgb(35, 70, 4);
-  border-radius: 0.7vw;
 }
 
 /*********** FONTS ***********/
