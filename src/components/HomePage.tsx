@@ -43,8 +43,10 @@ const HomePage: NextComponentType = () => {
             <p>Est-ce qu'on change le nom du clan ?</p>
             <div className="checkbox-container">
               <div className="checkbox flex-row around">
-                <label htmlFor="no">Non</label>
-                <input type="checkbox" name="no" id="no" onChange={handleCheckbox} />
+                <label htmlFor="no">
+                  Non
+                  <input type="checkbox" name="no" id="no" onChange={handleCheckbox} />
+                </label>
               </div>
               <button onClick={handleSubmit}>Valider</button>
             </div>
@@ -59,8 +61,10 @@ const HomePage: NextComponentType = () => {
           <form>
             <div className="suggestion-wrapper">
               <div className="suggestion-field">
-                <label htmlFor="clan-name">Nom du clan</label>
-                <input type="text" name="clan-name" id="suggestion-input" />
+                <label htmlFor="clan-name">
+                  Nom du clan
+                  <input type="text" name="clan-name" id="suggestion-input" />
+                </label>
               </div>
               <button onClick={handleSubmit} id="submit">
                 Ajouter
@@ -68,7 +72,7 @@ const HomePage: NextComponentType = () => {
             </div>
           </form>
         </section>
-        <section className="list-mock">
+        <section className="list">
           <h3>Noms de clans proposés :</h3>
           <ul className="clans-list">
             <li>hdhbhb</li>

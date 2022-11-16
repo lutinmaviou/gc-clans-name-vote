@@ -35,16 +35,6 @@ button:hover {
   cursor: pointer;
 }
 
-ul {
-  text-align: left;
-  font-size: 5vw;
-}
-
-h3 {
-  text-align: left;
-  padding-left: 4vw;
-  font-size: 6vw;
-}
 
 .flex-row {
   display: flex;
