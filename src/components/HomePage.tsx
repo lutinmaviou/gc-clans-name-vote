@@ -68,6 +68,14 @@ const HomePage: NextComponentType = () => {
             </div>
           </form>
         </section>
+        <section className="list-mock">
+          <h3>Noms de clans proposés :</h3>
+          <ul className="clans-list">
+            <li>hdhbhb</li>
+            <li>erhhrher</li>
+            <li>jhjtehhr</li>
+          </ul>
+        </section>
       </main>
     </div>
   );
