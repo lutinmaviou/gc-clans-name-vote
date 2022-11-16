@@ -45,7 +45,6 @@
   color: red;
   font-size: 10vw;
   margin: 12vw auto;
-  border: 1px solid red;
 }
 
 .question .checkbox{
@@ -57,7 +56,6 @@
 .question .checkbox-container #no {
   width: 13vw;
   height: 7vw;
-  border: 1px solid gold !important;
 }
 
 #no:hover{
@@ -65,11 +63,7 @@
 }
 
 .question button {
-  /* padding: 2vw 4vw;
-  font-size: 5vw;
-  margin-top: 2vw;
-  margin-left: -2vw; */
-  width: 40%;
+  width: 60%;
   margin: auto;
   font-size: 6vw;
   padding: 1vw 4vw;
