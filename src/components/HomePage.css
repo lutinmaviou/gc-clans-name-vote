@@ -49,13 +49,14 @@
 }
 
 .question .checkbox{
-  width: 50%;
+  width: 60%;
   margin: auto;
+  align-items: baseline;
 }
 
 .question .checkbox-container #no {
-  /* width: 13vw;
-  height: 7vw; */
+  width: 13vw;
+  height: 7vw;
   border: 1px solid gold !important;
 }
 
