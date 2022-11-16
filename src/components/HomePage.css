@@ -19,7 +19,7 @@
 }
 
 .title h1 {
-  font-size: 9vw;
+  font-size: 10vw;
   opacity: 0.9;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .question {
-  font-size: 5vw;
+  font-size: 6vw;
   margin: 8vw auto;
   width: 70%;
   font-weight: bold;
@@ -52,6 +52,10 @@
   width: 5vw;
   height: 5vw;
   margin-left: 1vw;
+}
+
+#no:hover{
+  cursor: pointer;
 }
 
 .question button {

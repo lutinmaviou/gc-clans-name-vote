@@ -31,7 +31,7 @@ const HomePage: NextComponentType = () => {
   return (
     <div className="App ms-500">
       <div className="bg">
-        <Image src={Bg} fill alt="Fond d'écran golfeur" />
+        <Image src={Bg} fill alt="Fond d'écran golf" />
       </div>
       <main>
         <section className="title">
@@ -40,9 +40,9 @@ const HomePage: NextComponentType = () => {
         </section>
         <section className="question">
           <form>
-            <p>Dois-t'on changer le nom du clan ?</p>
+            <p>Est-ce qu'on change le nom du clan ?</p>
             <div className="checkbox-container flex-row around items-center">
-              <div className="checkbox">
+              <div className="checkbox flex-row">
                 <label htmlFor="no">NON</label>
                 <input type="checkbox" name="no" id="no" onChange={handleCheckbox} />
               </div>
