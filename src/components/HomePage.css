@@ -44,24 +44,32 @@
 .question .checkbox-container {
   color: red;
   font-size: 10vw;
-  width: 70%;
   margin: 12vw auto;
+  border: 1px solid red;
 }
 
-.question .checkbox-container #no {
+.question .checkbox{
+  width: 50%;
+  margin: auto;
+}
+
+/* .question .checkbox-container #no {
   width: 13vw;
   height: 7vw;
-}
+} */
 
 #no:hover{
   cursor: pointer;
 }
 
 .question button {
-  padding: 2vw 4vw;
+  border: 1px solid gold;
+  /* padding: 2vw 4vw;
   font-size: 5vw;
   margin-top: 2vw;
-  margin-left: -2vw;
+  margin-left: -2vw; */
+  width: 50%;
+  margin: auto;
 }
 
 .suggestion-container {
