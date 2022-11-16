@@ -44,7 +44,7 @@ const HomePage: NextComponentType = () => {
             <div className="checkbox-container">
               <div className="checkbox flex-row around">
                 <label htmlFor="no">
-                  Non
+                  NON
                   <input type="checkbox" name="no" id="no" onChange={handleCheckbox} />
                 </label>
               </div>
