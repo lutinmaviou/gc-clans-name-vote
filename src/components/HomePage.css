@@ -53,23 +53,25 @@
   margin: auto;
 }
 
-/* .question .checkbox-container #no {
-  width: 13vw;
-  height: 7vw;
-} */
+.question .checkbox-container #no {
+  /* width: 13vw;
+  height: 7vw; */
+  border: 1px solid gold !important;
+}
 
 #no:hover{
   cursor: pointer;
 }
 
 .question button {
-  border: 1px solid gold;
   /* padding: 2vw 4vw;
   font-size: 5vw;
   margin-top: 2vw;
   margin-left: -2vw; */
-  width: 50%;
+  width: 40%;
   margin: auto;
+  font-size: 6vw;
+  padding: 1vw 4vw;
 }
 
 .suggestion-container {
