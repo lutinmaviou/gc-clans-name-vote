@@ -41,8 +41,8 @@ const HomePage: NextComponentType = () => {
         <section className="question">
           <form>
             <p>Est-ce qu'on change le nom du clan ?</p>
-            <div className="checkbox-container flex-row around items-center">
-              <div className="checkbox flex-row">
+            <div className="checkbox-container">
+              <div className="checkbox">
                 <label htmlFor="no">NON</label>
                 <input type="checkbox" name="no" id="no" onChange={handleCheckbox} />
               </div>
