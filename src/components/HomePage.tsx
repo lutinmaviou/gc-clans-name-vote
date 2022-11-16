@@ -42,11 +42,9 @@ const HomePage: NextComponentType = () => {
           <form>
             <p>Est-ce qu'on change le nom du clan ?</p>
             <div className="checkbox-container">
-              <div className="checkbox flex-row around">
-                <label htmlFor="no">
-                  NON
-                  <input type="checkbox" name="no" id="no" onChange={handleCheckbox} />
-                </label>
+              <div className="checkbox flex-row items-center center">
+                <label htmlFor="no">NON</label>
+                <input type="checkbox" name="no" id="no" onChange={handleCheckbox} />
               </div>
               <button onClick={handleSubmit}>Valider</button>
             </div>

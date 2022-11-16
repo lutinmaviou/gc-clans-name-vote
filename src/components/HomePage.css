@@ -48,9 +48,15 @@
 }
 
 .question .checkbox {
-  width: 50%;
+  /* width: 50%;
   margin: auto;
-  align-items: baseline;
+  align-items: baseline; */
+  margin: auto;
+}
+
+.checkbox label{
+  margin-right: -5vw;
+  margin-left: 10vw;
 }
 
 #no{
@@ -99,7 +105,7 @@
   border: none;
   margin-top: 4vw;
   width: 50vw;
-  height: 9vw;
+  height: 10vw;
   font-size: 6vw;
   font-weight: bold;
   cursor: text;
