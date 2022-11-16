@@ -48,14 +48,9 @@
 }
 
 .question .checkbox{
-  width: 50%;
+  width: 60%;
   margin: auto;
   align-items: baseline;
-}
-
-.question .checkbox-container #no {
-  width: 13vw;
-  height: 7vw;
 }
 
 #no:hover{
@@ -63,7 +58,7 @@
 }
 
 .question button {
-  width: 60%;
+  width: 50%;
   margin: auto;
   font-size: 6vw;
   padding: 1vw 4vw;
