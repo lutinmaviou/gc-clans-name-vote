@@ -10,7 +10,6 @@ class MyDocument extends Document {
     return (
       <Html lang="fr">
         <Head>
-        <meta name="viewport" content="viewport-fit=cover" />
           <link rel="shortcut icon" href="/suitcase.png" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link

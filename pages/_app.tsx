@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <meta name="viewport" content="viewport-fit=cover" />
         <title>Bertrand Bourion</title>
       </Head>
       <Component {...pageProps} />
