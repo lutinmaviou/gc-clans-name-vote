@@ -48,17 +48,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 6vw;
+  font-size: 8vw;
   color: red;
 }
 
 .checkbox input[type='checkbox'] {
-  width: 4.5vw;
-  height: 4.5vw;
-  margin-left: 1vw;
+  width: 5.5vw;
+  height: 5.5vw;
+  margin-left: 2vw;
 }
 
-.checkbox input[type='checkbox']:hover {
+.checkbox input[type='checkbox']:hover,
+.checkbox label {
   cursor: pointer;
 }
 
