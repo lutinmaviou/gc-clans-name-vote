@@ -50,8 +50,8 @@ const HomePage: NextComponentType = () => {
                   id="no"
                   onClick={() => console.log('clic')}
                 />
-                {/*  <button onClick={handleSubmit}>Valider</button> */}
-              </div>
+                </div>
+                <button id='checkbox-button' onClick={handleSubmit}>Valider</button>
             </div>
           </form>
         </section>
@@ -64,10 +64,8 @@ const HomePage: NextComponentType = () => {
           <form>
             <div className="suggestion-wrapper">
               <div className="suggestion-field">
-              <label htmlFor="clan-name">
-              Nom du clan
-              </label>
-              <input type="text" name="clan-name" id="suggestion-input" />
+                <label htmlFor="clan-name">Nom du clan</label>
+                <input type="text" name="clan-name" id="suggestion-input" />
               </div>
               <button onClick={handleSubmit} id="submit">
                 Ajouter
