@@ -50,8 +50,10 @@ const HomePage: NextComponentType = () => {
                   id="no"
                   onClick={() => console.log('clic')}
                 />
-                </div>
-                <button id='checkbox-button' onClick={handleSubmit}>Valider</button>
+              </div>
+              <button id="checkbox-button" onClick={handleSubmit}>
+                Valider
+              </button>
             </div>
           </form>
         </section>
