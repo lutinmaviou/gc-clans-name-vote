@@ -3,6 +3,7 @@ import clientPromise from '../lib/mongodb';
 import { InferGetServerSidePropsType } from 'next';
 import HomePage from '../src/components/HomePage';
 import { useEffect } from 'react';
+import axios from 'axios';
 
 type Props = {
   ip: string;
@@ -11,6 +12,9 @@ type Props = {
 export async function getServerSideProps(/* context */) {
   try {
     await clientPromise;
+    // Load ip address from the API
+    const res = await axios.get('https://geolocation-db.com/json/');
+    const ip = res.data.IPv4;
     // `await clientPromise` will use the default database passed in the MONGODB_URI
     // However you can use another database (e.g. myDatabase) by replacing the `await clientPromise` with the following code:
     //
@@ -21,9 +25,11 @@ export async function getServerSideProps(/* context */) {
     // db.find({}) or any of the MongoDB Node Driver commands
     const data = await db.collection<Document>('gc-clansname-vote').find().toArray();
     const properties = JSON.parse(JSON.stringify(data));
-    /* const insert = await db
-      .collection<Props>('gc-clansname-vote')
-      .insertOne({ ip: 'toto' }); */
+    if (db.collection<Document>('gc-clansname-vote').find({ ip: { exists: false } }) === true) {
+      const insert = await db
+        .collection<Props>('gc-clansname-vote')
+        .insertOne({ ip: ip });
+    }
 
     return {
       props: { isConnected: true, properties },
@@ -40,7 +46,6 @@ export default function Home({
   properties,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   console.log(properties);
-  //useEffect(() => {}, []);
   return (
     <>
       <Head>

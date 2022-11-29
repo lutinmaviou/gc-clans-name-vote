@@ -19,15 +19,6 @@ const HomePage: NextComponentType = () => {
       no.checked = false;
     }
   };
-  //creating function to load ip address from the API
-  const getData = async () => {
-    const res = await axios.get('https://geolocation-db.com/json/');
-    setIP(res.data.IPv4);
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
   return (
     <div className="App ms-500">
       <div className="bg">
