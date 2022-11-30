@@ -20,17 +20,13 @@ export async function getServerSideProps(/* context */) {
     //
     const client = await clientPromise;
     const db = client.db('portfolio');
-    //
-    // Then you can execute queries against your database like so:
-    // db.find({}) or any of the MongoDB Node Driver commands
-    const data = await db.collection<Document>('gc-clansname-vote').find().toArray();
+    const collection = db.collection<Document>('gc-clansname-vote');
+    const data = await collection.find().toArray();
     const properties = JSON.parse(JSON.stringify(data));
-    if (db.collection<Document>('gc-clansname-vote').find({ ip: { exists: false } }) === true) {
-      const insert = await db
-        .collection<Props>('gc-clansname-vote')
-        .insertOne({ ip: ip });
-    }
 
+    await db
+      .collection<Props>('gc-clansname-vote')
+      .updateOne({ ip: ip }, { $setOnInsert: { ip: ip } }, { upsert: true });
     return {
       props: { isConnected: true, properties },
     };
