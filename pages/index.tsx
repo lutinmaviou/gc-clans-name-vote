@@ -7,6 +7,7 @@ import axios from 'axios';
 
 type Props = {
   ip: string;
+  haveVoted: boolean;
 };
 
 export async function getServerSideProps(/* context */) {
@@ -24,11 +25,13 @@ export async function getServerSideProps(/* context */) {
     const data = await collection.find().toArray();
     const properties = JSON.parse(JSON.stringify(data));
 
-    await db
-      .collection<Props>('gc-clansname-vote')
-      .updateOne({ ip: ip }, { $setOnInsert: { ip: ip } }, { upsert: true });
+    await collection.updateOne(
+      { ip: ip, haveVoted: false },
+      { $setOnInsert: { ip: ip } },
+      { upsert: true }
+    );
     return {
-      props: { isConnected: true, properties },
+      props: { isConnected: true, properties, ip },
     };
   } catch (e) {
     console.error(e);
@@ -40,8 +43,10 @@ export async function getServerSideProps(/* context */) {
 
 export default function Home({
   properties,
+  ip,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   console.log(properties);
+  console.log(ip);
   return (
     <>
       <Head>

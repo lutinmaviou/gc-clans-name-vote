@@ -7,7 +7,6 @@ import Bg from '../../public/img/bg.jpg';
 const HomePage: NextComponentType = () => {
   const [ip, setIP] = useState('');
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
     console.log(e.target);
   };
   const handleCheckbox = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,7 +38,6 @@ const HomePage: NextComponentType = () => {
                   type="checkbox"
                   name="no"
                   id="no"
-                  onClick={() => console.log('clic')}
                 />
               </div>
               <button id="checkbox-button" onClick={handleSubmit}>
