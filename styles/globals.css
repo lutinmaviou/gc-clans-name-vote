@@ -40,7 +40,7 @@ button:hover {
   display: flex;
 }
 
-.felx-col {
+.flex-col {
   display: flex;
   flex-direction: column;
 }
@@ -51,6 +51,10 @@ button:hover {
 
 .between {
   justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
 }
 
 .items-center {

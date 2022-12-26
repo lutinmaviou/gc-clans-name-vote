@@ -2,7 +2,6 @@ import Head from 'next/head';
 import clientPromise from '../lib/mongodb';
 import { InferGetServerSidePropsType } from 'next';
 import HomePage from '../src/components/HomePage';
-import { useEffect } from 'react';
 import axios from 'axios';
 
 type Props = {
@@ -25,11 +24,14 @@ export async function getServerSideProps(/* context */) {
     const data = await collection.find().toArray();
     const properties = JSON.parse(JSON.stringify(data));
 
-    await collection.updateOne(
-      { ip: ip, haveVoted: false },
+    /*  await collection.updateOne(
+      {
+        ip: ip,
+        haveVoted: false,
+      },
       { $setOnInsert: { ip: ip } },
       { upsert: true }
-    );
+    ); */
     return {
       props: { isConnected: true, properties, ip },
     };

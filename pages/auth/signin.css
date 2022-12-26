@@ -1,0 +1,28 @@
+.signinForm-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.signinForm-container form {
+  border: 1px solid white;
+  border-radius: 1vw;
+  box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw white -0.1vw -0.1vw 0.1vw 0.1vw white;
+  padding: 5vw;
+}
+
+.signinForm-container h1 {
+  margin-top: 1vw;
+  margin-bottom: 15vw;
+}
+
+.signinForm-container form label {
+  margin-bottom: 10vw;
+}
+
+.signinForm-container form input {
+  padding: 0.5em;
+}
+
+.signinForm-container form button{
+    padding: 3vw;
+}
