@@ -3,6 +3,7 @@ import axios from 'axios';
 import { NextComponentType } from 'next';
 import Image from 'next/image';
 import Bg from '../../public/img/bg.jpg';
+import { signIn } from 'next-auth/react';
 
 const HomePage: NextComponentType = () => {
   const [ip, setIP] = useState('');
@@ -24,6 +25,13 @@ const HomePage: NextComponentType = () => {
         <Image src={Bg} fill alt="Fond d'écran golf" />
       </div>
       <main>
+        <button
+          onClick={() => {
+            signIn();
+          }}
+        >
+          Login
+        </button>
         <section className="title">
           <h1>Team France 974</h1>
           <h2>Oté zot tout !</h2>
@@ -34,11 +42,7 @@ const HomePage: NextComponentType = () => {
             <div className="checkbox-container">
               <div className="checkbox">
                 <label htmlFor="no">NON</label>
-                <input
-                  type="checkbox"
-                  name="no"
-                  id="no"
-                />
+                <input type="checkbox" name="no" id="no" />
               </div>
               <button id="checkbox-button" onClick={handleSubmit}>
                 Valider
